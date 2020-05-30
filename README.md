@@ -1,2 +1,2 @@
 # LeetCode
-LeetCode Repo
+LeetCode Repo for C++ Practice.
