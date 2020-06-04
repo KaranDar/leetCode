@@ -19,14 +19,17 @@ int removeDuplicates(vector<int>& arr){
     }
 
     arr[j]=arr[len-1];
+    
+    arr.resize(j+1);
     return j+1;
 }
 
 void printVector(vector<int>& a) {
-   cout << "The vector elements are : ";
-   for(int i=0; i < a.size(); i++)
-    cout << a.at(i) << ' ';
-   cout << endl;
+    cout << "Length of the vector is " << a.size() << endl;
+    cout << "The vector elements are : ";
+    for(int i=0; i < a.size(); i++)
+        cout << a.at(i) << ' ';
+    cout << endl;
 }
 
 int main(){
@@ -42,15 +45,13 @@ int main(){
 
     printVector(numsArray);
     cout << "Length after removing duplicates is " << removeDuplicates(numsArray) << endl;
-    cout << "Vector after removing duplicates is " << endl;
     printVector(numsArray);
 
-    cout << endl << endl << endl;
+    cout << endl << endl;
     
     vector<int> numbersArray = {1,1,2,2,3,4,5,6,7,7,8,9,10};
     printVector(numbersArray);
     cout << "Length after removing duplicates is " << removeDuplicates(numbersArray) << endl;
-    cout << "Vector after removing duplicates is " << endl;
     printVector(numbersArray);
 
     return 0;
